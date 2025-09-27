@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebCodeMastery - Learn Web Development</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">💻</span>
+                    <span>WebCodeMaster</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#" id="home-link">Home</a></li>
+                        <li><a href="#" id="html-link">HTML</a></li>
+                        <li><a href="#" id="css-link">CSS</a></li>
+                        <li><a href="#" id="js-link">JavaScript</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <button class="btn btn-outline" id="login-btn">Login</button>
+                    <button class="btn btn-primary" id="register-btn">Register</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Home Page -->
+            <section id="home-page">
+                <div class="hero">
+                    <h1>Master Web Development with WebCodeMaster</h1>
+                    <p>Learn HTML, CSS, and JavaScript through interactive lessons, exercises, and real-world projects. Start your journey to becoming a web developer today!</p>
+                    <a href="#" class="cta-button" id="start-learning-btn">Start Learning Now</a>
+                </div>
+                 <div class="pricing-section">
+                    <h2 class="section-title">Choose Your Plan</h2>
+                    <div class="pricing-grid">
+                        <div class="pricing-card">
+                            <h3>Free</h3>
+                            <div class="price">R0 (Free with adverts) <span>/month</span></div>
+                            <ul class="pricing-features">
+                                <li>Access to HTML course</li>
+                                <li>Basic exercises</li>
+                                <li>Community support</li>
+                                <li>Limited content</li>
+                            </ul>
+                            <button class="btn btn-outline" style="color: var(--dark); border-color: var(--dark);">Get Started</button>
+                        </div>
+                        <div class="pricing-card featured">
+                            <h3>Basic Offered from May 2026</h3>
+                            <div class="price">R55 <span>/month</span></div>
+                            <ul class="pricing-features">
+                                <li>Access to all courses</li>
+                                <li>All exercises</li>
+                                <li>Priority support</li>
+                                <li>Progress tracking</li>
+                            </ul>
+                            <button class="btn btn-primary">Get Started</button>
+                        </div>
+                        <div class="pricing-card">
+                            <h3>Pro Offered from May 2026</h3>
+                            <div class="price">R100 <span>/month</span></div>
+                            <ul class="pricing-features">
+                                <li>All Basic features</li>
+                                <li>Project reviews</li>
+                                <li>Certificate of completion</li>
+                                <li>Career guidance</li>
+                            </ul>
+                            <button class="btn btn-outline" style="color: var(--dark); border-color: var(--dark);">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="courses-section">
+                    <h2 class="section-title">Our Courses</h2>
+                    <div class="courses-grid">
+                        <div class="course-card">
+                            <div class="course-image" style="background-color: #e34c26;"></div>
+                            <div class="course-content">
+                                <h3>HTML Fundamentals</h3>
+                                <p>Learn the building blocks of web development with HTML. Create structured web pages with semantic markup.</p>
+                                <a href="#" class="btn btn-primary" data-course="html">Start Learning</a>
+                            </div>
+                        </div>
+                        <div class="course-card">
+                            <div class="course-image" style="background-color: #264de4;"></div>
+                            <div class="course-content">
+                                <h3>CSS Styling</h3>
+                                <p>Make your web pages beautiful with CSS. Learn layout, responsive design, and modern CSS techniques.</p>
+                                <a href="#" class="btn btn-primary" data-course="css">Start Learning</a>
+                            </div>
+                        </div>
+                        <div class="course-card">
+                            <div class="course-image" style="background-color: #f0db4f;"></div>
+                            <div class="course-content">
+                                <h3>JavaScript Programming</h3>
+                                <p>Add interactivity to your websites with JavaScript. Learn variables, functions, DOM manipulation and more.</p>
+                                <a href="#" class="btn btn-primary" data-course="javascript">Start Learning</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               
+            </section>
+
+            <!-- Login Form -->
+            <section id="login-page" class="auth-container hidden">
+                <div class="auth-form">
+                    <h2>Login to Your Account</h2>
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label for="login-username">Username</label>
+                            <input type="text" id="login-username" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+                    </form>
+                    <div class="auth-toggle">
+                        <p>Don't have an account? <a href="#" id="show-register">Register</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Register Form -->
+            <section id="register-page" class="auth-container hidden">
+                <div class="auth-form">
+                    <h2>Create an Account</h2>
+                    <form id="register-form">
+                        <div class="form-group">
+                            <label for="register-username">Username</label>
+                            <input type="text" id="register-username" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-phone">Phone Number</label>
+                            <input type="tel" id="register-phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-password">Password</label>
+                            <input type="password" id="register-password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-confirm">Confirm Password</label>
+                            <input type="password" id="register-confirm" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Register</button>
+                    </form>
+                    <div class="auth-toggle">
+                        <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HTML Course Page -->
+            <section id="html-page" class="hidden">
+                <div class="language-header">
+                    <h1>HTML Course</h1>
+                    <p>Learn the foundation of web development</p>
+                </div>
+                <div class="language-content">
+                    <div class="notes-section">
+                        <div class="section-header">
+                            <h2>HTML Notes</h2>
+                            <span>Progress: 25%</span>
+                        </div>
+                        <div class="notes-content">
+                            <div class="note-item">
+                                <h3>Introduction to HTML</h3>
+                                <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages.</p>
+                            </div>
+                            <div class="note-item">
+                                <h3>HTML Elements</h3>
+                                <p>HTML elements are the building blocks of HTML pages, represented by tags.</p>
+                            </div>
+                            <div class="note-item">
+                                <h3>HTML Attributes</h3>
+                                <p>Attributes provide additional information about HTML elements.</p>
+                            </div>
+                            <div class="note-item">
+                                <h3>HTML Headings</h3>
+                                <p>Headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exercises-section">
+                        <div class="section-header">
+                            <h2>HTML Exercises</h2>
+                            <span>Completed: 2/8</span>
+                        </div>
+                        <div class="exercises-content">
+                            <div class="exercise-item">
+                                <h4>Create a Basic HTML Page</h4>
+                                <p>Create a simple HTML page with a heading and a paragraph.</p>
+                                <div class="exercise-actions">
+                                    <button class="btn btn-primary">Start Exercise</button>
+                                    <button class="btn btn-outline" style="color: var(--dark); border-color: var(--dark);">View Solution</button>
+                                </div>
+                            </div>
+                            <div class="exercise-item">
+                                <h4>Build a Simple Form</h4>
+                                <p>Create an HTML form with input fields for name, email, and a submit button.</p>
+                                <div class="exercise-actions">
+                                    <button class="btn btn-primary">Start Exercise</button>
+                                    <button class="btn btn-outline" style="color: var(--dark); border-color: var(--dark);">View Solution</button>
+                                </div>
+                            </div>
+                            <div class="exercise-item">
+                                <h4>Create a Navigation Menu</h4>
+                                <p>Build a navigation menu using unordered lists and links.</p>
+                                <div class="exercise-actions">
+                                    <button class="btn btn-outline" style="color: var(--dark); border-color: var(--dark);" disabled>Start Exercise</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CSS Course Page -->
+            <section id="css-page" class="hidden">
+                <div class="language-header">
+                    <h1>CSS Course</h1>
+                    <p>Style your web pages beautifully</p>
+                </div>
+                <div class="language-content">
+                    <div class="notes-section">
+                        <div class="section-header">
+                            <h2>CSS Notes</h2>
+                            <span>Progress: 15%</span>
+                        </div>
+                        <div class="notes-content">
+                            <div class="note-item">
+                                <h3>Introduction to CSS</h3>
+                                <p>CSS (Cascading Style Sheets) is used to style and layout web pages.</p>
+                            </div>
+                            <div class="note-item">
+                                <h3>CSS Selectors</h3>
+                                <p>Selectors are used to target HTML elements for styling.</p>
+                            </div>
+                            <div class="note-item">
+                                <h3>CSS Box Model</h3>
+                                <p>The box model describes the rectangular boxes generated for elements.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exercises-section">
+                        <div class="section-header">
+                            <h2>CSS Exercises</h2>
+                            <span>Completed: 1/10</span>
+                        </div>
+                        <div class="exercises-content">
+                            <div class="exercise-item">
+                                <h4>Style a Heading</h4>
+                                <p>Apply CSS styles to change the color, font, and size of a heading.</p>
+                                <div class="exercise-actions">
+                                    <button class="btn btn-primary">Start Exercise</button>
+                                    <button class="btn btn-outline" style="color: var(--dark); border-color: var(--dark);">View Solution</button>
+                                </div>
+                            </div>
+                            <div class="exercise-item">
+                                <h4>Create a Flexbox Layout</h4>
+                                <p>Use CSS Flexbox to create a responsive layout.</p>
+                                <div class="exercise-actions">
+                                    <button class="btn btn-outline" style="color: var(--dark); border-color: var(--dark);" disabled>Start Exercise</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- JavaScript Course Page -->
+            <section id="javascript-page" class="hidden">
+                <div class="language-header">
+                    <h1>JavaScript Course</h1>
+                    <p>Add interactivity to your websites</p>
+                </div>
+                <div class="language-content">
+                    <div class="notes-section">
+                        <div class="section-header">
+                            <h2>JavaScript Notes</h2>
+                            <span>Progress: 5%</span>
+                        </div>
+                        <div class="notes-content">
+                            <div class="note-item">
+                                <h3>Introduction to JavaScript</h3>
+                                <p>JavaScript is a programming language that enables interactive web pages.</p>
+                            </div>
+                            <div class="note-item">
+                                <h3>Variables and Data Types</h3>
+                                <p>Learn how to store and manipulate data in JavaScript.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exercises-section">
+                        <div class="section-header">
+                            <h2>JavaScript Exercises</h2>
+                            <span>Completed: 0/12</span>
+                        </div>
+                        <div class="exercises-content">
+                            <div class="exercise-item">
+                                <h4>Hello World Program</h4>
+                                <p>Write your first JavaScript program that displays "Hello, World!".</p>
+                                <div class="exercise-actions">
+                                    <button class="btn btn-outline" style="color: var(--dark); border-color: var(--dark);" disabled>Start Exercise</button>
+                                </div>
+                            </div>
+                            <div class="exercise-item">
+                                <h4>Simple Calculator</h4>
+                                <p>Create a basic calculator that can add, subtract, multiply, and divide.</p>
+                                <div class="exercise-actions">
+                                    <button class="btn btn-outline" style="color: var(--dark); border-color: var(--dark);" disabled>Start Exercise</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CodeMaster</h3>
+                    <p>Learn web development with our interactive courses and exercises.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">HTML Course</a></li>
+                        <li><a href="#">CSS Course</a></li>
+                        <li><a href="#">JavaScript Course</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>Email: jethromojedzi@gmail.com</li>
+                        <li>Phone: +2783 345 7023</li>
+                        <li>Address: Around City of Tshwane Municipality</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 WebCodeMaster. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
